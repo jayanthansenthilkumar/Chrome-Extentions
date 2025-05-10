@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Generator</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 320px;
+      padding: 10px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 18px;
+      text-align: center;
+      margin-top: 0;
+      color: #4285f4;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: calc(100% - 18px);
+      margin-bottom: 8px;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+    #qrcode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+      margin-top: 15px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      padding: 10px;
+    }
+    .download-btn {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .hidden {
+      display: none;
+    }
+    .error-message {
+      color: #d93025;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>QR Code Generator</h1>
+    
+    <div>
+      <button id="currentTab">Generate QR for Current Tab</button>
+    </div>
+    
+    <div class="input-group">
+      <input type="text" id="customUrl" placeholder="Enter a URL or text">
+      <button id="customUrlBtn">Generate QR</button>
+    </div>
+    
+    <div id="qrcode"></div>
+    
+    <div id="downloadContainer" class="download-btn hidden">
+      <button id="downloadBtn">Download QR Code</button>
+    </div>
+  </div>
+  
+  <script src="qrcode.min.js"></script>
+  <script src="icon_generator.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shorten URL</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Shorten URL</h1>
+    <div class="input-group">
+      <input type="text" id="urlInput" placeholder="Enter a long URL">
+      <button id="shortenButton">Shorten</button>
+    </div>
+    <div class="result-group" id="resultContainer" style="display: none;">
+      <input type="text" id="shortUrl" readonly>
+      <button id="copyButton">Copy</button>
+    </div>
+    <div id="error" class="error"></div>
+    <div class="history-section">
+      <h2>History</h2>
+      <div id="historyContainer"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

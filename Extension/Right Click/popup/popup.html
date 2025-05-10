@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Copy Paste</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Clipboard History</h1>
+    
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search clipboard history...">
+    </div>
+    
+    <div class="clipboard-history" id="clipboard-history">
+      <!-- Clipboard items will be populated here -->
+      <div class="empty-state">
+        <p>Your clipboard history will appear here</p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <button id="clear-history" class="btn danger">Clear History</button>
+      <button id="download-txt" class="btn">Download as .txt</button>
+      <div class="info">
+        <p>Right-click on any text to use enhanced copy options</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
